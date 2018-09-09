@@ -22,6 +22,10 @@ rl.on('line', reply => {
                 console.log("Have a great Day!");
                 process.exit(0);
                 break;
+            case 'CurrentWeather':
+                console.log(`Let me check...`);
+                // get weather data from an API
+                rl.prompt();
             default: {
                 console.log("I don't know what you mean :(");
                 rl.prompt();
