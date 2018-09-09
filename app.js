@@ -15,8 +15,12 @@ rl.on('line', reply => {
     matcher(reply, data => {
         switch(data.intent) {
             case 'Hello':
-                console.log("A big hello from Vanilla");
+                console.log(`${data.entities.greeting} to you too!`);
                 rl.prompt();
+                break;
+            case 'Exit':
+                console.log("Have a great Day!");
+                process.exit(0);
                 break;
             default: {
                 console.log("I don't know what you mean :(");
